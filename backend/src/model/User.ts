@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
 
 const newMongoose = new mongoose.Schema({
-    username: String,
+    username: {
+        type: String,
+        unique: true
+    },
     password: String,
     avatarimg: Buffer
 })

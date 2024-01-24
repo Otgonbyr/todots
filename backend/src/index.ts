@@ -6,6 +6,7 @@ const start = () => {
     const app = express()
     const PORT = 8000
     connectDatabase()
+    app.use('/auth', auth)
     app.get('/', (req, res) => {
         res.status(200).send({success:true, msg: "hello"})
     })
